@@ -3,7 +3,7 @@
 <h1 class="mb-3">Записи пользователя {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
 {% for recipe in recipes %}
 <article class="media content-section">
-  <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+  <img class="rounded-circle article-img" src="{{ recipe.author.profile.image.url }}">
   <div class="media-body">
     <div class="article-metadata">
       <a class="mr-2" href="{% url 'user-recipes' recipe.author.username %}">{{ recipe.author }}</a>
